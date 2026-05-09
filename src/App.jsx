@@ -1,5 +1,4 @@
-import { useState, useReducer, useEffect, useRef, useCallback } from "react";
-import { Camera, ChevronRight, ChevronLeft, Sparkles, Package, UtensilsCrossed, User, Plus, Trash2, RefreshCw, CheckCircle, Clock, Zap, Activity, X, ShoppingBag, AlertCircle, ArrowRight, Flame, Dumbbell, Leaf, Apple } from "lucide-react";
+
 
 async function callClaude(messages) {
   const res = await fetch("https://api.anthropic.com/v1/messages", {
@@ -645,7 +644,7 @@ function ProfileTab({ state, onReset }) {
   );
 }
 
-export default function NutritionCoach() {
+function NutritionCoach() {
   const [state, dispatch] = useReducer(reducer, initialState);
   const [tab, setTab] = useState("home");
   const [loaded, setLoaded] = useState(false);
